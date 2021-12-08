@@ -5,29 +5,30 @@ import org.junit.Test;
 
 public class MaximumTest {
 
+    //Test Case for the String where max_Value at First Position
     @Test
-    //  Test Case for the Integer where max_Value at First Position
-    public void given3IntegerValue_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
+    public void given3StringValue_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
         Maximum maximum = new Maximum();
-        int actualResult = Maximum . getMax(16,15,10);
-        int expectedResult = 16;
-        Assert.assertEquals(expectedResult,actualResult);
-    }
-      //  Test Case for the Integer where max_Value at Second Position
-    @Test
-    public void given3IntegerValue_Case2_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
-        Maximum maximum = new Maximum();
-        int actualResult = Maximum . getMax(10,15,11);
-        int expectedResult = 15;
-        Assert.assertEquals(expectedResult,actualResult);
-    }
-    //  Test Case for the Integer where max_Value at Third Position
-    @Test
-    public void given3IntegerValue_Case3_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
-        Maximum maximum = new Maximum();
-        int actualResult = Maximum . getMax(11,10,12);
-        int expectedResult = 12;
+        String actualResult = Maximum.stringMax("xyz","abc","PQR");
+        String expectedResult = "xyz";
         Assert.assertEquals(expectedResult,actualResult);
     }
 
+     //  Test Case for the String where max_Value at Second Position
+    @Test
+    public void given3StringValue_Case2_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
+        Maximum maximum = new Maximum();
+        String actualResult = Maximum . stringMax("ABC","pqr","XYZ");
+        String expectedResult = "pqr";
+        Assert.assertEquals(expectedResult,actualResult);
+    }
+
+    //  Test Case for the String where max_Value at Third Position
+    @Test
+    public void given3StringValue_Case3_WhenGetMaximumNO_ShouldReturnCorrectMaxValue() {
+        Maximum maximum = new Maximum();
+        String actualResult = Maximum . stringMax("XYz","ABC","abc");
+        String expectedResult = "abc";
+        Assert.assertEquals(expectedResult,actualResult);
+    }
 }

@@ -1,21 +1,17 @@
 package com.blz.generic;
-//Main Class
+
 public class Maximum {
-    //Main Method
-    public static void main(String[] args) {
-        System.out.println("Welcome Generics Problem"); // Print Welcome Message
-    }
-    // Passed the Integer
-    static Integer getMax(Integer a, Integer b, Integer c) {
-        // Compare the Value
-        if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            return a;
-        }
-        else if (b.compareTo(a) > 0 && b.compareTo(c) >0){
-            return b;
-        }else {
-            return c;
-        }
+    //Passed the String Value
+   public static String stringMax(String a, String b, String c) {
+       // Compare Method
+       if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
+           return a;
+       }
+       else if (b.compareTo(a) > 0 && b.compareTo(c) >0){
+           return b;
+       }else {
+           return c;
+       }
 
     }
 }
