@@ -1,4 +1,5 @@
 package com.blz.generic;
+import java.util.Arrays;
 public class Maximum <T extends Comparable> { // Generic Method
     T a,b,c;
     public Maximum (T a, T  b,T c){       // parameter constructor
@@ -6,6 +7,22 @@ public class Maximum <T extends Comparable> { // Generic Method
         this.b= b;
         this.c = c;
     }
+
+    public T Maximum(){
+        return Maximum.maximum( a, b, c);
+    }
+
+    public static <T extends Comparable> T maximum(T a, T b, T c) {
+        if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
+            return a;
+        }
+        else if (b.compareTo(a) > 0 && b.compareTo(c) >0){
+            return b;
+        }else {
+            return c;
+        }
+    }
+
     public static void main(String[] args) {
         Integer intResult = getMax(20, 40, 60); // Integer Value
         System.out.println(intResult);
@@ -13,7 +30,6 @@ public class Maximum <T extends Comparable> { // Generic Method
         System.out.println(floatResult);
         String stringResult= getMax ("abc","pqr","XYZ"); // String Value
         System.out.println(stringResult);
-
     }
 
     // Generic Method
@@ -27,6 +43,10 @@ public class Maximum <T extends Comparable> { // Generic Method
        }else {
            return c;
        }
+    }
+    public static <T extends Comparable> T Maximum(T... a) {
+        Arrays.sort(a);
+        return a[a.length-1];
     }
 
     @Override
