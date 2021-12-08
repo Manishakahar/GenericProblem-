@@ -1,5 +1,11 @@
 package com.blz.generic;
-public class Maximum {
+public class Maximum <T extends Comparable> { // Generic Method
+    T a,b,c;
+    public Maximum (T a, T  b,T c){       // parameter constructor
+        this.a = a;
+        this.b= b;
+        this.c = c;
+    }
     public static void main(String[] args) {
         Integer intResult = getMax(20, 40, 60); // Integer Value
         System.out.println(intResult);
@@ -21,6 +27,14 @@ public class Maximum {
        }else {
            return c;
        }
+    }
 
+    @Override
+    public String toString() {
+        return "Maximum{" +
+                "a=" + a +
+                ", b=" + b +
+                ", c=" + c +
+                '}';
     }
 }
